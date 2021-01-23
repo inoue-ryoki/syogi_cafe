@@ -1,0 +1,24 @@
+@charset "UTF8";
+
+.pc li a{
+    color: black;
+
+}
+header{
+    border-bottom: 1px solid #707070;
+}
+h1{
+    font-size: 30px;
+    padding: 40px;
+}
+.event h2{
+    text-align: center;
+  
+}
+#underline{
+    background: black;
+    top: 80px;
+}
+.event_box a{
+    padding: 20px 0;
+}

@@ -1,0 +1,22 @@
+@charset "UTF8";
+
+header{
+    border-bottom: 1px solid #707070;
+}
+.pc li a{
+    color: black;
+
+}
+#underline{
+    background: black;
+    top: 60px;
+}
+
+.info {
+   
+    text-align: center;
+}
+.info h1{
+    font-size: 40px;
+}
+

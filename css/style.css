@@ -1,0 +1,619 @@
+@charset "UTF8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+header ul li a,footer ul li a { 
+    text-decoration: none; 
+  }
+header ul li a{
+    color:white;
+}
+
+ 
+
+/* スマホ用ロゴのサイズ */
+header img{
+  
+    width: 15%;
+    height: auto;
+    padding: 10px;
+}
+
+
+/* ハンバーガー メニュー*/
+
+/* チェックボックスを左に移動させ見えなくする */
+input[type="checkbox"] {
+    position: absolute;
+    left: -100vw;
+}
+
+/* 開くボタンと閉じるボタンの位置を右上に指定 */
+.open,.close{
+    display: block;
+    position: absolute;
+    top:0%;
+    right:0%;
+
+}
+/*  閉じるボタンのサイズ */
+.close{
+    font-size: 50px;
+    color: #fff;
+}
+aside {
+    position: fixed;
+    /* 上に移動させて見えなくさせる */
+    top: -1500px;
+    /* 横幅を指定 */
+    width: 100%;
+    /* 高さを設定 */
+    height: 100vh;
+    /* 文字色を白 */
+    color: white;
+    transition: top 0.5s ease;
+    /* 0.5秒の間に移動させる */
+    transition: all 0.5s;
+    /* 背景画像の設定 */
+    background-image: url(../img/haikeikuro.jpg);
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    /* 写真の比率を保ちつつ、要素全体を覆う */
+    background-position: cover;
+    z-index: 1;
+}
+
+/* ハンバーガーメニューのリストの指定 */
+.sp ul li {
+    padding-top: 50px;
+    font-size: 50px;
+    text-align: center;
+
+}
+/* チェックするとtopが0になる */
+/* checkedはチェックが入っているときの指定 */
+/* ~ は関節セレクタ　 asideを指定*/
+input[type="checkbox"]:checked ~ aside{
+    top: 0;
+}
+/* ハンバーガーメニューアイコンのサイズ*/
+.fas{
+    font-size: 50px;
+}
+/*  pc用のナビを非表示　*/
+.pc ul{
+    display: none;
+}
+
+
+
+
+/* pc　タブレット用メニュー */
+@media(min-width:768px){ 
+    header nav{
+        float: right;
+        
+    }
+    header ul li{
+     
+        font-size: 50px;
+        color: white;
+    } 
+  /* pc用のul  */
+.pc ul{
+    /*ナビを均等に横並び */
+   display: flex;
+   justify-content: space-around;
+   
+}
+ header nav li a{
+    padding: 10px;
+    color: white;
+    /* ナビの透明度*/
+    opacity: 0.8;
+    font-size: 25px;
+    /* ナビの下線を消す */
+    text-decoration: none;
+    position: relative;
+}
+
+/* ナビの上下の線 */
+header nav li a:before,header nav li a:after{ 
+    /* ナビを基準に上下の線を絶対配置  */
+    position: absolute;
+    /* 位置を一番左に指定 */
+    left: 0px;
+    /* 幅をナビに合わせる */
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    content: "";
+    /* 透明度を0にして線を消す*/
+    opacity: 0;
+    /* 0.3秒の間に移動 */
+    transition: all 0.3s;
+}
+/* hoverした時に透明度を1にする */
+header nav a:hover{
+    opacity: 1;
+}
+
+header nav li a:before{
+    /* hoverする前の位置を、aタグのtop0pxにする */
+    top: 0px;
+    /* 10px上に移動させる */
+    transform: translateY(-10px);
+
+}
+header nav li a:after{
+      /* hoverする前の位置を、aタグのbottom0pxにする */
+    bottom: 0px;
+    /* 10px下に移動させる */
+    transform: translateY(10px);
+}
+
+
+/* hoverした時のナビの上下の線 */
+header nav a:hover:before,header nav a:hover:after{
+    /* 透明度を1にする */
+    opacity: 1;
+    /* 上下の線の位置を0pxの位置にする */
+    transform: translateY(0px);
+}
+
+
+.open,.close{
+    display: none;
+}
+}
+
+/* スマホ用犬の画像 */
+.home{
+    /* height: 800px; */
+    display: block;
+    width: 100%;
+    height: 70vh;
+    background-image: url(../img/top_dog.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 60% 100%;
+}
+/* タブレット用犬の画像 */
+@media(min-width:768px){
+.home{
+    height: 80vh;
+    background-size: cover;
+ }
+}
+/* pc用犬の画像 */
+@media(min-width:990px){
+    .home{
+        height: 100vh;
+       
+     }
+    }
+
+
+
+.home1{
+    color: white;
+    padding-bottom:50px;
+}
+.home h1,.home h2{
+    text-align: center;
+}
+.home h1{
+     /* スマホ用 将棋カフェのfont-size */
+    font-size: 50px;
+    
+    font-family: "Hannari"; 
+  
+}
+.home h2{
+ 
+    /* スマホ用 龍神のサイズ*/
+    font-size: 50px;
+    padding: 100px;
+    
+    font-family: "Hannari"; 
+}
+#underline {
+    position: absolute;
+    top: 100px;
+    /* left: 0; */
+    width: 0;
+    height: 5px;
+    background: white;
+}
+
+h1,h2{
+ 
+    text-align: center;
+
+}
+.under {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+}
+.midasi{
+    text-align: center;
+}
+/* タブレット　PC用　 */
+@media(min-width:768px){
+     /* pc用　将棋カフェの指定*/
+    .home h1{
+        font-size: 80px; 
+        position: relative;
+       
+       }
+ 
+       
+       /* pc用　龍神の指定*/
+       .home h2{
+        font-size: 120px; 
+    }
+    }
+
+
+.main {
+    /* mainのテキストをセンターに指定 */
+  text-align: center;   
+}
+.main h2{
+    font-size: 30px;
+    padding: 30px 0;
+}
+.intro h2{
+    padding: 30px;
+}
+.intro p{
+    padding: 50px 0;
+    font-size: 15px;
+    font-family: "Sawarabi Mincho";
+    text-align: left;
+}
+@media(min-width:768px){
+    .main h2{
+        font-size: 50px;
+        padding: 50px 0;
+    }
+    .intro p{
+        font-size: 25px;
+        max-width: 700px;
+        padding: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        letter-spacing: 2px;
+    } 
+}
+
+.contents{
+    padding:50px 0;
+    background-image: url(sirohaikei.jpg);
+}
+.youtube h2{
+    padding-bottom: 20px;
+}
+
+.youtube iframe{
+    width: 560px;
+    height: 315px;
+    max-width: 90%;
+   
+}
+
+
+
+.youtube img{
+    margin-top: 100px;
+   width:100%;
+   height:auto; 
+}
+@media(min-width:768px){
+    .youtube iframe{
+      width: 560px;
+      height: 315px;
+    }
+    .youtube {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+    }
+    .youtube img{
+        width: 400px;
+    }
+}
+
+.event_box{
+    background-color: white;
+}
+.event_box a:hover{
+    background: #ff6;
+}
+
+.event dt{
+   margin-right: 0.5em ;
+ }
+.event dd{
+   margin-left: 6em ;
+}
+.event_box a{
+    border-top: 1px solid black;
+    display: flex;
+   
+}
+.event_box img{
+    max-width: 100%;
+    height: auto;
+}
+
+@media(min-width: 800px){
+.event_box{
+    width:700px;
+    margin: 30px auto;
+}
+}
+.sita{
+    border-bottom: 1px solid black;
+}
+@media(min-width: 640px){
+    .info{
+        width:700px;
+        margin: 30px auto;
+    }
+    .info dt{
+        width: 120px;
+       vertical-align: top;
+        color: rgba(80,0,0,0.90);
+        font-size: 15px;
+        font-weight: bold;
+        margin-top: 2px;
+    }
+
+    .info dd{
+        text-align: left;
+        margin-left: 200px;
+    }
+   
+}
+
+
+
+.info dt{
+    text-align: left;
+    padding: 15px;
+}
+
+
+
+
+.price{
+    background-color: rgba(20,110,110,0.80);
+    margin: -40px 0;
+}
+.price_box dt{
+    background-color: rgba(0,0,0,0.45);
+    padding: 20px;
+}
+.price_box dd{
+    padding: 20px;
+    background: rgba(255,255,255,0.8);
+    margin-left: 0;
+}
+.price h2{
+
+    color: #ffffff;
+
+   
+}
+.price h3,.price dt{
+    color: white;
+}
+.price h3{
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+    font-size: 25px;
+}
+
+@media(min-width:640px){
+    .price_box{
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 200px;
+    }
+  
+    .heijitu,.syukujitu{
+        width: 45%;
+    }
+}
+.yoyaku {
+    padding-top: 40px;
+}
+span{
+    color: red;
+}
+.people{
+    display: flex;
+    justify-content: center;
+}
+select{
+    width: 50%;
+    height: 50px;
+}
+.yoyaku input{
+margin-top: 5%;
+ width: 100%;
+ height: 50px;
+   
+}
+input[type="submit"]{
+    margin: 30px 0;
+}
+textarea{
+    width: 100%;
+    
+}
+@media(min-width:640px){
+  
+    .people{
+     width: 30%;
+    }
+    
+    select{
+        width: 100%;
+        margin: 0 5%;
+    }
+    .yoyaku input{
+        width: 30%;
+        margin-top: 0%;
+       
+    }
+    input[type="submit"]{
+        margin: 30px 0;
+    }
+    .search{
+        display: flex;
+       justify-content: center;
+       width: 70%;
+       margin: 50px auto;
+    
+       
+       
+    }
+    textarea{
+        width: 70%;
+    }
+}
+footer{
+    text-align: center;
+}
+.sns{
+    display: flex;
+    justify-content: space-around;
+    margin:50px;
+}
+
+.twitter:hover,.instagram:hover{
+    opacity: 0.8;
+}
+.twitter p{
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+    color: #fff;
+    background: #55acee;
+    margin: 0;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.instagram p{
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+    color: #fff;
+    background: #D93177;
+    margin: 0;
+    margin-bottom: 20px;
+    display: inline-block;
+
+}
+footer img{
+    
+    width:100%;
+    height:auto;
+    margin-top: 10px; 
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+}
+footer ul li a{
+    color:#999;
+    
+}
+.banner a{
+    display: inline-block;
+}
+footer li a:hover{
+    color:black;
+}
+small{
+    font-size: 5px;
+    
+}
+
+@media(min-width:640px){
+    .banner{
+        display: flex;
+        justify-content: space-around;
+    }
+    footer img{
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+    }
+    footer ul{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

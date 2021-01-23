@@ -1,0 +1,97 @@
+@charset "UTF8";
+.pc li a{
+    color: black;
+
+}
+header{
+    border-bottom: 1px solid #707070;
+}
+#underline {
+    position: absolute;
+    top: 100px;
+    /* left: 0; */
+    width: 0;
+    height: 5px;
+    background: black;
+}
+
+h1,h2{
+ 
+    text-align: center;
+
+}
+
+.under {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+}
+.midasi{
+    text-align: center;
+}
+.about h1 {
+    font-size: 30px;
+    padding: 50px;
+}
+ h2{
+    font-size: 20px;    
+    margin: 20px;
+    border-bottom: 1px solid black;
+    
+}
+.about p{
+    padding: 20px;
+}
+h3{
+    background-color: #eee;
+    padding: 8px;
+    text-align: left;
+    border-left: 3px solid #ccc;
+}
+ img{
+    max-width: 100%;
+    height: auto;
+
+}
+dt{
+    padding: 15px;
+    float: left;
+}
+.other{
+    padding: 25px;
+}
+.shop-info dd{
+    width: 100%;
+    padding: 15px;
+  
+
+}
+
+
+@media(min-width:768px){
+    h2{
+        font-size: 30px;
+    }
+    .content{
+        width: 700px;
+        margin: 0 auto;
+    }
+   
+    .about img{
+        width: 100%;
+        height: auto;
+    }
+    
+}
+
+.shop-info dt{
+ width: 22%;
+
+}
+.shop-info dd{
+    /* width: 78%; */
+    border-top: 1px solid #ddd;
+}
+
+
+
