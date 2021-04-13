@@ -9,14 +9,22 @@ header{
 }
 #underline{
     background: black;
-    top: 60px;
+    top: 40px;
 }
 
 .info {
-   
+   padding-top:50px;
     text-align: center;
 }
 .info h1{
-    font-size: 40px;
+    font-size: 30px;
+}
+dl{
+    padding-top: 100px;
 }
 
+@media(min-width:768px){
+    .info{
+    padding-top: 150px;
+}
+}

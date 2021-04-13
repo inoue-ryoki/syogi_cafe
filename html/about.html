@@ -8,6 +8,10 @@
     <meta name="description" content="将棋カフェ、龍神は徳島にある将棋カフェです。初心者でも大歓迎です。将棋が好きな方はぜひご来店ください">
     <link href="../css/style.css" rel="stylesheet" type="text/css">
     <link href="../css/about.css" rel="stylesheet" type="text/css">
+    <link href="../css/slick.css" rel="stylesheet" type="text/css">
+    <link href="../css/slick-theme.css" rel="stylesheet" type="text/css">
+    <link href="../css/common.css" rel="stylesheet" type="text/css">
+
     <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
@@ -40,9 +44,9 @@
 
 
             <!-- ハンバーガーメニュー -->
-            <div class="h">
+            <div class="humburger">
                 <!-- チェックボックス(隠れている方) -->
-                　<input id="menu" type="checkbox">
+                　<input id="menu" type="checkbox" value="">
                 <!-- 開くチェックボックス -->
                 <label for="menu" class="open"><i class="fas fa-bars"></i></label>
 
@@ -76,7 +80,7 @@
                 </div>
             </div>
             <div class="content">
-                <img src="../img/about_cafe.jpg">
+                <img src="../img/about_cafe.jpg" alt="カフェ">
 
                 <h2>将棋を知らなくても楽しめるカフェ</h2>
                 <p>将棋カフェ龍神は将棋を知らない方でも楽しめるカフェです。
@@ -119,11 +123,17 @@
 
                     <h2>徳島にある将棋カフェ</h2>
 
-                    <p>徳島は自然が豊かで、空気も綺麗です。阿波踊りや鳴門の渦潮等も有名です。
-                        写真は徳島市のシンボル的存在として親しまれている山、眉山からの風景です。
-                        徳島ラーメンやすだち、鳴門金時芋など美味しい食べ物も多いです。
+                    <p>徳島は自然が豊かで、空気も綺麗です。阿波踊りやマチアソビ等のイベントも有名です。
+                        将棋カフェに来たついでに、徳島を観光するのも良いかもしれません。
                     </p>
-                    <img src="../img/about_bizan.jpg" alt="眉山">
+                    <!-- <img src="../img/about_bizan.jpg" alt="眉山"> -->
+                    <div class="slick01">
+                        <div><a href="#"><img src="../img/img_single_spotCity_awaodorikaikan02.jpeg" alt="image01"></a></div>
+                        <div><a href="#"><img src="../img/uzu1.jpeg" alt="image02"></a></div>
+                        <div><a href="#"><img src="../img/img_single_spotCity_bizanropuei02-720x480.jpeg" alt="image03"></a></div>
+
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -179,6 +189,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../js/under.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/common.js"></script>
+
+
 </body>
 
 

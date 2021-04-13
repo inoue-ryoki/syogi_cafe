@@ -1,5 +1,5 @@
 @charset "UTF8";
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -49,21 +49,36 @@ table {
 }
 
 
+/* フォント設定 */
+@font-face {
+    font-family: "mamelon3.5";
+    src: url("../fonts/mamelon-fonts3.5.woff") format("woff");
+}
+@font-face {
+    font-family: "mamelon5";
+    src: url("../fonts/mamelon-fonts5.woff") format("woff");
+}
+
+body{
+     font-family: "mamelon3.5";
+}
 
 
 
-header ul li a,footer ul li a { 
-    text-decoration: none; 
+
+
+header ul li a,footer ul li a {
+    text-decoration: none;
   }
 header ul li a{
     color:white;
 }
 
- 
+
 
 /* スマホ用ロゴのサイズ */
 header img{
-  
+
     width: 15%;
     height: auto;
     padding: 10px;
@@ -135,30 +150,39 @@ input[type="checkbox"]:checked ~ aside{
     display: none;
 }
 
+  header{
+        position: absolute;
+        top:0;
+    }
+
 
 
 
 /* pc　タブレット用メニュー */
-@media(min-width:768px){ 
+@media(min-width:768px){
+    header{
+         position: absolute;
+        top:0;
+    }
     header nav{
         float: right;
-        
+
     }
     header ul li{
-     
+
         font-size: 50px;
-        color: white;
-    } 
+        color: black;
+    }
   /* pc用のul  */
 .pc ul{
     /*ナビを均等に横並び */
    display: flex;
    justify-content: space-around;
-   
+
 }
  header nav li a{
     padding: 10px;
-    color: white;
+    color: black;
     /* ナビの透明度*/
     opacity: 0.8;
     font-size: 25px;
@@ -168,7 +192,7 @@ input[type="checkbox"]:checked ~ aside{
 }
 
 /* ナビの上下の線 */
-header nav li a:before,header nav li a:after{ 
+header nav li a:before,header nav li a:after{
     /* ナビを基準に上下の線を絶対配置  */
     position: absolute;
     /* 位置を一番左に指定 */
@@ -176,7 +200,7 @@ header nav li a:before,header nav li a:after{
     /* 幅をナビに合わせる */
     width: 100%;
     height: 2px;
-    background: #fff;
+    background: black;
     content: "";
     /* 透明度を0にして線を消す*/
     opacity: 0;
@@ -218,7 +242,7 @@ header nav a:hover:before,header nav a:hover:after{
 }
 
 /* スマホ用犬の画像 */
-.home{
+.home_image{
     /* height: 800px; */
     display: block;
     width: 100%;
@@ -227,45 +251,48 @@ header nav a:hover:before,header nav a:hover:after{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 60% 100%;
+    /* background-attachment: fixed; */
 }
 /* タブレット用犬の画像 */
 @media(min-width:768px){
-.home{
+.home_image{
     height: 80vh;
     background-size: cover;
+
  }
 }
 /* pc用犬の画像 */
 @media(min-width:990px){
-    .home{
+    .home_image{
+        background-attachment: fixed;
         height: 100vh;
-       
+
      }
     }
 
 
 
-.home1{
+.home_image{
     color: white;
     padding-bottom:50px;
 }
-.home h1,.home h2{
+.home_image h1,.home_image h2{
     text-align: center;
 }
-.home h1{
+.home_image h1{
      /* スマホ用 将棋カフェのfont-size */
     font-size: 50px;
-    
-    font-family: "Hannari"; 
-  
+
+   font-family: "mamelon5";
+
 }
-.home h2{
- 
+.home_image h2{
+
     /* スマホ用 龍神のサイズ*/
     font-size: 50px;
-    padding: 100px;
-    
-    font-family: "Hannari"; 
+    padding-top: 250px;
+
+     font-family: "mamelon5";
 }
 #underline {
     position: absolute;
@@ -277,7 +304,7 @@ header nav a:hover:before,header nav a:hover:after{
 }
 
 h1,h2{
- 
+
     text-align: center;
 
 }
@@ -285,6 +312,7 @@ h1,h2{
     display: inline-block;
     margin: 0 auto;
     position: relative;
+     top: 50px;
 }
 .midasi{
     text-align: center;
@@ -292,23 +320,32 @@ h1,h2{
 /* タブレット　PC用　 */
 @media(min-width:768px){
      /* pc用　将棋カフェの指定*/
-    .home h1{
-        font-size: 80px; 
+    .home_image h1{
+        font-size: 80px;
         position: relative;
-       
+        top: 100px;
+
        }
- 
-       
+
+
        /* pc用　龍神の指定*/
-       .home h2{
-        font-size: 120px; 
+       .home_image h2{
+        font-size: 120px;
     }
+        #underline {
+    position: absolute;
+    top: 200px;
+    /* left: 0; */
+    width: 0;
+    height: 5px;
+    background: white;
+}
     }
 
 
 .main {
     /* mainのテキストをセンターに指定 */
-  text-align: center;   
+  text-align: center;
 }
 .main h2{
     font-size: 30px;
@@ -320,7 +357,7 @@ h1,h2{
 .intro p{
     padding: 50px 0;
     font-size: 15px;
-    font-family: "Sawarabi Mincho";
+
     text-align: left;
 }
 @media(min-width:768px){
@@ -336,12 +373,12 @@ h1,h2{
         margin-right: auto;
         text-align: left;
         letter-spacing: 2px;
-    } 
+    }
 }
 
 .contents{
     padding:50px 0;
-    background-image: url(sirohaikei.jpg);
+    background-image: url(../img/top_sirohaikei.jpg);
 }
 .youtube h2{
     padding-bottom: 20px;
@@ -351,7 +388,7 @@ h1,h2{
     width: 560px;
     height: 315px;
     max-width: 90%;
-   
+
 }
 
 
@@ -359,7 +396,7 @@ h1,h2{
 .youtube img{
     margin-top: 100px;
    width:100%;
-   height:auto; 
+   height:auto;
 }
 @media(min-width:768px){
     .youtube iframe{
@@ -379,7 +416,7 @@ h1,h2{
 .event_box{
     background-color: white;
 }
-.event_box a:hover{
+.event_box:hover{
     background: #ff6;
 }
 
@@ -389,10 +426,15 @@ h1,h2{
 .event dd{
    margin-left: 6em ;
 }
-.event_box a{
+/* .event_box a{
     border-top: 1px solid black;
     display: flex;
-   
+
+} */
+.event_box{
+    border-top: 1px solid black;
+    display: flex;
+
 }
 .event_box img{
     max-width: 100%;
@@ -402,7 +444,7 @@ h1,h2{
 @media(min-width: 800px){
 .event_box{
     width:700px;
-    margin: 30px auto;
+    margin: 0 auto;
 }
 }
 .sita{
@@ -426,7 +468,7 @@ h1,h2{
         text-align: left;
         margin-left: 200px;
     }
-   
+
 }
 
 
@@ -456,7 +498,7 @@ h1,h2{
 
     color: #ffffff;
 
-   
+
 }
 .price h3,.price dt{
     color: white;
@@ -473,7 +515,7 @@ h1,h2{
         justify-content: space-around;
         padding-bottom: 200px;
     }
-  
+
     .heijitu,.syukujitu{
         width: 45%;
     }
@@ -496,21 +538,21 @@ select{
 margin-top: 5%;
  width: 100%;
  height: 50px;
-   
+
 }
 input[type="submit"]{
     margin: 30px 0;
 }
 textarea{
     width: 100%;
-    
+
 }
 @media(min-width:640px){
-  
+
     .people{
      width: 30%;
     }
-    
+
     select{
         width: 100%;
         margin: 0 5%;
@@ -518,7 +560,7 @@ textarea{
     .yoyaku input{
         width: 30%;
         margin-top: 0%;
-       
+
     }
     input[type="submit"]{
         margin: 30px 0;
@@ -528,9 +570,9 @@ textarea{
        justify-content: center;
        width: 70%;
        margin: 50px auto;
-    
-       
-       
+
+
+
     }
     textarea{
         width: 70%;
@@ -574,10 +616,10 @@ footer{
 
 }
 footer img{
-    
+
     width:100%;
     height:auto;
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
 footer ul{
@@ -588,7 +630,7 @@ footer ul{
 }
 footer ul li a{
     color:#999;
-    
+
 }
 .banner a{
     display: inline-block;
@@ -598,7 +640,7 @@ footer li a:hover{
 }
 small{
     font-size: 5px;
-    
+
 }
 
 @media(min-width:640px){

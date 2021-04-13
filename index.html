@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
+
     <title>将棋cafe</title>
 </head>
 
@@ -18,58 +19,58 @@
 
 <body>
     <div class="all">
-        <div class="home">
-            <header>
 
-                <a href="index.html">
-                    <img src="img/logo.png" alt="龍神のロゴ">
-                </a>
-                <!-- pcメニュー -->
-                <nav class="pc">
+        <header>
 
-
-
-                    <ul>
-                        <li><a href="html/about.html">店舗情報</a></li>
-                        <li><a href="html/event.html">イベント</a></li>
-                        <li><a href="html/info.html">お知らせ</a></li>
-                        <li><a href="html/price.html">料金</a></li>
-                        <li><a href="html/charm.html">将棋の魅力</a></li>
-                    </ul>
-
-
-                </nav>
-
-
-                <!-- ハンバーガーメニュー -->
-                <div class="h">
-                    <!-- チェックボックス(隠れている方) -->
-                    　<input id="menu" type="checkbox">
-                    <!-- 開くハンバーガーボタン -->
-                    <label for="menu" class="open"><i class="fas fa-bars"></i></label>
-
-
-                    <aside>
-
-                        <!--閉じるボタン -->
-                        <label for="menu" class="close">×</label>
+            <a href="index.html">
+                <img src="img/logo.png" alt="龍神のロゴ">
+            </a>
+            <!-- pcメニュー -->
+            <nav class="pc">
 
 
 
-                        <nav class="sp">
-                            <ul>
-                                <li><a href="html/about.html">店舗情報</a></li>
-                                <li><a href="html/event.html">イベント</a></li>
-                                <li><a href="html/info.html">お知らせ</a></li>
-                                <li><a href="html/price.html">料金</a></li>
-                                <li><a href="html/charm.html">将棋の魅力</a></li>
+                <ul>
+                    <li><a href="html/about.html">店舗情報</a></li>
+                    <li><a href="html/event.html">イベント</a></li>
+                    <li><a href="html/info.html">お知らせ</a></li>
+                    <li><a href="html/price.html">料金</a></li>
+                    <li><a href="html/charm.html">将棋の魅力</a></li>
+                </ul>
 
-                            </ul>
-                        </nav>
-                    </aside>
-                </div>
-            </header>
 
+            </nav>
+
+
+            <!-- ハンバーガーメニュー -->
+            <div class="humburger">
+                <!-- チェックボックス(隠れている方) -->
+                　<input id="menu" type="checkbox" value="">
+                <!-- 開くハンバーガーボタン -->
+                <label for="menu" class="open"><i class="fas fa-bars"></i></label>
+
+
+                <aside>
+
+                    <!--閉じるボタン -->
+                    <label for="menu" class="close">×</label>
+
+
+
+                    <nav class="sp">
+                        <ul>
+                            <li><a href="html/about.html">店舗情報</a></li>
+                            <li><a href="html/event.html">イベント</a></li>
+                            <li><a href="html/info.html">お知らせ</a></li>
+                            <li><a href="html/price.html">料金</a></li>
+                            <li><a href="html/charm.html">将棋の魅力</a></li>
+
+                        </ul>
+                    </nav>
+                </aside>
+            </div>
+        </header>
+        <div class="home_image">
             <div class="home1">
                 <div class="midasi">
                     <div class="under">
@@ -98,7 +99,8 @@
                 <div class="youtube">
                     <h2>YouTube</h2>
 
-                    <iframe src="https://www.youtube.com/embed/KtZSIiDHyyw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!-- <iframe src="https://www.youtube.com/embed/KtZSIiDHyyw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/KtZSIiDHyyw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     　　　
                     <a href="https://www.youtube.com/channel/UC2gADHyouBiM-xSi7xpidSw/about">
                         <img src="img/youtube.jpg" alt="YouTubeチャンネル">
@@ -108,41 +110,47 @@
                 <div class="event">
                     <h2>イベント</h2>
 
-                    <dl class="event_box">
 
-                        <a href="https://shogicobin.com/event/3653">
+
+                    <a href="https://shogicobin.com/event/3653">
+                        <dl class="event_box">
                             <dt>
 
-                                <img src="img/event_fujitakai-1.png" width="220" height="110" 　alt="藤田さん">
+                                <img src="img/event_fujitakai-1.png" width="220" height="110" alt="藤田さん">
                             </dt>
                             <dd>
                                 [毎週水曜日]指導棋士　藤田一樹の指導対局会
                             </dd>
-                        </a>
+                        </dl>
+                    </a>
 
 
-                        <a href="https://shogicobin.com/event/3653">
+                    <a href="https://shogicobin.com/event/3653">
+                        <dl class="event_box">
                             <dt>
                                 <img src="img/event_meikaku-1.png" width="220" height="110" alt="メイカク将棋教室">
                             </dt>
                             <dd>
                                 [毎週木曜日]メイカク将棋教室(指導棋士　細谷優人の指導対局会)
                             </dd>
+                        </dl>
 
-                        </a>
+                    </a>
 
-                        <a href="#" class="sita">
+                    <a href="#" class="sita">
+                        <dl class="event_box">
                             <dt>
                                 <img src="img/event_usa.jpg" width="220" height="110" alt="うさにゃんせん">
                             </dt>
                             <dd>
                                 [女性限定将棋大会]　うさにゃんせん
                             </dd>
+                        </dl>
 
-                        </a>
+                    </a>
 
 
-                    </dl>
+
 
 
 
@@ -185,7 +193,7 @@
                     </div>
                     <div class="syukujitu">
                         <h3>祝日</h3>
-                        　　　　　　　　　<dl class="price_list">
+                        　　<dl class="price_list">
                             <dt>一般</dt>
                             <dd>2000円（１ドリンク付き）</dd>
                             <dt>学生</dt>
@@ -252,7 +260,7 @@
 
                 <p>ご要望とご質問：</p>
                 <p>イベント参加ご希望の方はイベント名のご記入をお願いします。</p>
-                　　　　　　　　　<textarea name="comment" rows="3" cols="40"></textarea>
+                　　　　　　　　　<textarea name="comment" rows="3" cols="40">ここに入力してください</textarea>
 
                 <input type="submit" value="ご予約条件を入力してください">
 
@@ -307,6 +315,8 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/under.js"></script>
+
+
 </body>
 
 </html>
