@@ -79,9 +79,20 @@ header ul li a{
 /* スマホ用ロゴのサイズ */
 header img{
 
-    width: 15%;
+    width: 25%;
     height: auto;
-    padding: 10px;
+    padding: 15px;
+
+}
+
+/* PC用ロゴのサイズ */
+@media(min-width:768px){
+header img{
+
+    width: 15%;
+
+
+}
 }
 
 
@@ -281,7 +292,7 @@ header nav a:hover:before,header nav a:hover:after{
 }
 .home_image h1{
      /* スマホ用 将棋カフェのfont-size */
-    font-size: 50px;
+    font-size: 40px;
 
    font-family: "mamelon5";
 
@@ -296,11 +307,15 @@ header nav a:hover:before,header nav a:hover:after{
 }
 #underline {
     position: absolute;
-    top: 100px;
+    top: 60px;
     /* left: 0; */
     width: 0;
     height: 5px;
     background: white;
+}
+
+#top_underline{
+    top: 90px;
 }
 
 h1,h2{
@@ -312,7 +327,11 @@ h1,h2{
     display: inline-block;
     margin: 0 auto;
     position: relative;
-     top: 50px;
+     top: 60px;
+}
+
+.top_under{
+    top: 180px;
 }
 .midasi{
     text-align: center;
@@ -330,7 +349,8 @@ h1,h2{
 
        /* pc用　龍神の指定*/
        .home_image h2{
-        font-size: 120px;
+        font-size: 100px;
+        padding-top: 350px;
     }
         #underline {
     position: absolute;
@@ -355,7 +375,7 @@ h1,h2{
     padding: 30px;
 }
 .intro p{
-    padding: 50px 0;
+    padding: 50px 10px;
     font-size: 15px;
 
     text-align: left;
@@ -387,7 +407,7 @@ h1,h2{
 .youtube iframe{
     width: 560px;
     height: 315px;
-    max-width: 90%;
+    max-width: 100%;
 
 }
 
@@ -423,9 +443,9 @@ h1,h2{
 .event dt{
    margin-right: 0.5em ;
  }
-.event dd{
+/* .event dd{
    margin-left: 6em ;
-}
+} */
 /* .event_box a{
     border-top: 1px solid black;
     display: flex;
@@ -437,19 +457,35 @@ h1,h2{
 
 }
 .event_box img{
-    max-width: 100%;
+    /* max-width: 100%; */
+    width: 150px;
     height: auto;
 }
 
-@media(min-width: 800px){
+
+
+@media(min-width: 768px){
 .event_box{
     width:700px;
     margin: 0 auto;
+}
+.event_box img{
+     width: 250px;
+    max-width: 100%;
+    /* width: 150px; */
+
+    height: auto;
 }
 }
 .sita{
     border-bottom: 1px solid black;
 }
+
+.info dd{
+        text-align: left;
+        margin-left: 15px;
+
+    }
 @media(min-width: 640px){
     .info{
         width:700px;
@@ -493,6 +529,8 @@ h1,h2{
     padding: 20px;
     background: rgba(255,255,255,0.8);
     margin-left: 0;
+    margin-bottom: 20px;
+
 }
 .price h2{
 
