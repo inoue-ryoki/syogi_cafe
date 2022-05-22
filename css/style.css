@@ -4,48 +4,135 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 
@@ -54,30 +141,33 @@ table {
     font-family: "mamelon3.5";
     src: url("../fonts/mamelon-fonts3.5.woff") format("woff");
 }
+
 @font-face {
     font-family: "mamelon5";
     src: url("../fonts/mamelon-fonts5.woff") format("woff");
 }
 
-body{
-     font-family: "mamelon3.5";
+body {
+    font-family: "mamelon3.5";
 }
 
 
 
 
 
-header ul li a,footer ul li a {
+header ul li a,
+footer ul li a {
     text-decoration: none;
-  }
-header ul li a{
-    color:white;
+}
+
+header ul li a {
+    color: white;
 }
 
 
 
 /* スマホ用ロゴのサイズ */
-header img{
+header img {
 
     width: 25%;
     height: auto;
@@ -86,13 +176,13 @@ header img{
 }
 
 /* PC用ロゴのサイズ */
-@media(min-width:768px){
-header img{
+@media(min-width:768px) {
+    header img {
 
-    width: 15%;
+        width: 15%;
 
 
-}
+    }
 }
 
 
@@ -105,18 +195,21 @@ input[type="checkbox"] {
 }
 
 /* 開くボタンと閉じるボタンの位置を右上に指定 */
-.open,.close{
+.open,
+.close {
     display: block;
     position: absolute;
-    top:0%;
-    right:0%;
+    top: 0%;
+    right: 0%;
 
 }
+
 /*  閉じるボタンのサイズ */
-.close{
+.close {
     font-size: 50px;
     color: #fff;
 }
+
 aside {
     position: fixed;
     /* 上に移動させて見えなくさせる */
@@ -133,7 +226,7 @@ aside {
     /* 背景画像の設定 */
     background-image: url(../img/haikeikuro.jpg);
     background-repeat: no-repeat;
-    background-size:100% 100%;
+    background-size: 100% 100%;
     /* 写真の比率を保ちつつ、要素全体を覆う */
     background-position: cover;
     z-index: 1;
@@ -146,114 +239,126 @@ aside {
     text-align: center;
 
 }
+
 /* チェックするとtopが0になる */
 /* checkedはチェックが入っているときの指定 */
 /* ~ は関節セレクタ　 asideを指定*/
-input[type="checkbox"]:checked ~ aside{
+input[type="checkbox"]:checked~aside {
     top: 0;
 }
+
 /* ハンバーガーメニューアイコンのサイズ*/
-.fas{
+.fas {
     font-size: 50px;
 }
+
 /*  pc用のナビを非表示　*/
-.pc ul{
+.pc ul {
     display: none;
 }
 
-  header{
+header {
+    position: absolute;
+    top: 0;
+}
+
+
+
+
+/* pc タブレット用メニュー */
+@media(min-width:768px) {
+    header {
         position: absolute;
-        top:0;
+        top: 0;
     }
 
-
-
-
-/* pc　タブレット用メニュー */
-@media(min-width:768px){
-    header{
-         position: absolute;
-        top:0;
-    }
-    header nav{
+    header nav {
         float: right;
 
     }
-    header ul li{
+
+    header ul li {
 
         font-size: 50px;
         color: black;
     }
-  /* pc用のul  */
-.pc ul{
-    /*ナビを均等に横並び */
-   display: flex;
-   justify-content: space-around;
 
-}
- header nav li a{
-    padding: 10px;
-    color: black;
-    /* ナビの透明度*/
-    opacity: 0.8;
-    font-size: 25px;
-    /* ナビの下線を消す */
-    text-decoration: none;
-    position: relative;
-}
+    /* pc用のul  */
+    .pc ul {
+        /*ナビを均等に横並び */
+        display: flex;
+        justify-content: space-around;
 
-/* ナビの上下の線 */
-header nav li a:before,header nav li a:after{
-    /* ナビを基準に上下の線を絶対配置  */
-    position: absolute;
-    /* 位置を一番左に指定 */
-    left: 0px;
-    /* 幅をナビに合わせる */
-    width: 100%;
-    height: 2px;
-    background: black;
-    content: "";
-    /* 透明度を0にして線を消す*/
-    opacity: 0;
-    /* 0.3秒の間に移動 */
-    transition: all 0.3s;
-}
-/* hoverした時に透明度を1にする */
-header nav a:hover{
-    opacity: 1;
-}
+    }
 
-header nav li a:before{
-    /* hoverする前の位置を、aタグのtop0pxにする */
-    top: 0px;
-    /* 10px上に移動させる */
-    transform: translateY(-10px);
+    header nav li a {
+        padding: 10px;
+        color: black;
+        /* ナビの透明度*/
+        opacity: 0.8;
+        font-size: 25px;
+        /* ナビの下線を消す */
+        text-decoration: none;
+        position: relative;
+    }
 
-}
-header nav li a:after{
-      /* hoverする前の位置を、aタグのbottom0pxにする */
-    bottom: 0px;
-    /* 10px下に移動させる */
-    transform: translateY(10px);
-}
+    /* ナビの上下の線 */
+    header nav li a:before,
+    header nav li a:after {
+        /* ナビを基準に上下の線を絶対配置  */
+        position: absolute;
+        /* 位置を一番左に指定 */
+        left: 0px;
+        /* 幅をナビに合わせる */
+        width: 100%;
+        height: 2px;
+        background: black;
+        content: "";
+        /* 透明度を0にして線を消す*/
+        opacity: 0;
+        /* 0.3秒の間に移動 */
+        transition: all 0.3s;
+    }
 
+    /* hoverした時に透明度を1にする */
+    header nav a:hover {
+        opacity: 1;
+    }
 
-/* hoverした時のナビの上下の線 */
-header nav a:hover:before,header nav a:hover:after{
-    /* 透明度を1にする */
-    opacity: 1;
-    /* 上下の線の位置を0pxの位置にする */
-    transform: translateY(0px);
-}
+    header nav li a:before {
+        /* hoverする前の位置を、aタグのtop0pxにする */
+        top: 0px;
+        /* 10px上に移動させる */
+        transform: translateY(-10px);
+
+    }
+
+    header nav li a:after {
+        /* hoverする前の位置を、aタグのbottom0pxにする */
+        bottom: 0px;
+        /* 10px下に移動させる */
+        transform: translateY(10px);
+    }
 
 
-.open,.close{
-    display: none;
-}
+    /* hoverした時のナビの上下の線 */
+    header nav a:hover:before,
+    header nav a:hover:after {
+        /* 透明度を1にする */
+        opacity: 1;
+        /* 上下の線の位置を0pxの位置にする */
+        transform: translateY(0px);
+    }
+
+
+    .open,
+    .close {
+        display: none;
+    }
 }
 
 /* スマホ用犬の画像 */
-.home_image{
+.home_image {
     /* height: 800px; */
     display: block;
     width: 100%;
@@ -264,47 +369,54 @@ header nav a:hover:before,header nav a:hover:after{
     background-position: 60% 100%;
     /* background-attachment: fixed; */
 }
-/* タブレット用犬の画像 */
-@media(min-width:768px){
-.home_image{
-    height: 80vh;
-    background-size: cover;
 
- }
+/* タブレット用犬の画像 */
+@media(min-width:768px) {
+    .home_image {
+        height: 80vh;
+        background-size: cover;
+
+    }
 }
+
 /* pc用犬の画像 */
-@media(min-width:990px){
-    .home_image{
+@media(min-width:990px) {
+    .home_image {
         background-attachment: fixed;
         height: 100vh;
 
-     }
     }
-
-
-
-.home_image{
-    color: white;
-    padding-bottom:50px;
 }
-.home_image h1,.home_image h2{
+
+
+
+.home_image {
+    color: white;
+    padding-bottom: 50px;
+}
+
+.home_image h1,
+.home_image h2 {
     text-align: center;
 }
-.home_image h1{
-     /* スマホ用 将棋カフェのfont-size */
+
+.home_image h1 {
+    /* スマホ用 将棋カフェのfont-size */
     font-size: 40px;
 
-   font-family: "mamelon5";
+    font-family: "mamelon5";
 
 }
-.home_image h2{
+
+.home_image h2 {
 
     /* スマホ用 龍神のサイズ*/
     font-size: 50px;
     padding-top: 250px;
 
-     font-family: "mamelon5";
+    font-family: "mamelon5";
 }
+
 #underline {
     position: absolute;
     top: 60px;
@@ -314,78 +426,89 @@ header nav a:hover:before,header nav a:hover:after{
     background: white;
 }
 
-#top_underline{
+#top_underline {
     top: 90px;
 }
 
-h1,h2{
+h1,
+h2 {
 
     text-align: center;
 
 }
+
 .under {
     display: inline-block;
     margin: 0 auto;
     position: relative;
-     top: 60px;
+    top: 60px;
 }
 
-.top_under{
+.top_under {
     top: 180px;
 }
-.midasi{
+
+.midasi {
     text-align: center;
 }
+
 /* タブレット　PC用　 */
-@media(min-width:768px){
-     /* pc用　将棋カフェの指定*/
-    .home_image h1{
+@media(min-width:768px) {
+
+    /* pc用　将棋カフェの指定*/
+    .home_image h1 {
         font-size: 80px;
         position: relative;
         top: 100px;
 
-       }
+    }
 
 
-       /* pc用　龍神の指定*/
-       .home_image h2{
+    /* pc用　龍神の指定*/
+    .home_image h2 {
         font-size: 100px;
         padding-top: 350px;
     }
-        #underline {
-    position: absolute;
-    top: 200px;
-    /* left: 0; */
-    width: 0;
-    height: 5px;
-    background: white;
-}
+
+    #underline {
+        position: absolute;
+        top: 200px;
+        /* left: 0; */
+        width: 0;
+        height: 5px;
+        background: white;
     }
+}
 
 
 .main {
     /* mainのテキストをセンターに指定 */
-  text-align: center;
+    text-align: center;
 }
-.main h2{
+
+.main h2 {
     font-size: 30px;
     padding: 30px 0;
 }
-.intro h2{
+
+.intro h2 {
     padding: 30px;
 }
-.intro p{
+
+.intro p {
     padding: 50px 10px;
     font-size: 15px;
 
     text-align: left;
 }
-@media(min-width:768px){
-    .main h2{
+
+@media(min-width:768px) {
+    .main h2 {
         font-size: 50px;
         padding: 50px 0;
     }
-    .intro p{
+
+    .intro p {
         font-size: 25px;
         max-width: 700px;
         padding: 30px;
@@ -396,15 +519,16 @@ h1,h2{
     }
 }
 
-.contents{
-    padding:50px 0;
+.contents {
+    padding: 50px 0;
     background-image: url(../img/top_sirohaikei.jpg);
 }
-.youtube h2{
+
+.youtube h2 {
     padding-bottom: 20px;
 }
 
-.youtube iframe{
+.youtube iframe {
     width: 560px;
     height: 315px;
     max-width: 100%;
@@ -413,36 +537,41 @@ h1,h2{
 
 
 
-.youtube img{
+.youtube img {
     margin-top: 100px;
-   width:100%;
-   height:auto;
+    width: 100%;
+    height: auto;
 }
-@media(min-width:768px){
-    .youtube iframe{
-      width: 560px;
-      height: 315px;
+
+@media(min-width:768px) {
+    .youtube iframe {
+        width: 560px;
+        height: 315px;
     }
+
     .youtube {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    .youtube img{
+
+    .youtube img {
         width: 400px;
     }
 }
 
-.event_box{
+.event_box {
     background-color: white;
 }
-.event_box:hover{
+
+.event_box:hover {
     background: #ff6;
 }
 
-.event dt{
-   margin-right: 0.5em ;
- }
+.event dt {
+    margin-right: 0.5em;
+}
+
 /* .event dd{
    margin-left: 6em ;
 } */
@@ -451,12 +580,13 @@ h1,h2{
     display: flex;
 
 } */
-.event_box{
+.event_box {
     border-top: 1px solid black;
     display: flex;
 
 }
-.event_box img{
+
+.event_box img {
     /* max-width: 100%; */
     width: 150px;
     height: auto;
@@ -464,43 +594,47 @@ h1,h2{
 
 
 
-@media(min-width: 768px){
-.event_box{
-    width:700px;
-    margin: 0 auto;
-}
-.event_box img{
-     width: 250px;
-    max-width: 100%;
-    /* width: 150px; */
+@media(min-width: 768px) {
+    .event_box {
+        width: 700px;
+        margin: 0 auto;
+    }
 
-    height: auto;
+    .event_box img {
+        width: 250px;
+        max-width: 100%;
+        /* width: 150px; */
+
+        height: auto;
+    }
 }
-}
-.sita{
+
+.sita {
     border-bottom: 1px solid black;
 }
 
-.info dd{
-        text-align: left;
-        margin-left: 15px;
+.info dd {
+    text-align: left;
+    margin-left: 15px;
 
-    }
-@media(min-width: 640px){
-    .info{
-        width:700px;
+}
+
+@media(min-width: 640px) {
+    .info {
+        width: 700px;
         margin: 30px auto;
     }
-    .info dt{
+
+    .info dt {
         width: 120px;
-       vertical-align: top;
-        color: rgba(80,0,0,0.90);
+        vertical-align: top;
+        color: rgba(80, 0, 0, 0.90);
         font-size: 15px;
         font-weight: bold;
         margin-top: 2px;
     }
 
-    .info dd{
+    .info dd {
         text-align: left;
         margin-left: 200px;
     }
@@ -509,7 +643,7 @@ h1,h2{
 
 
 
-.info dt{
+.info dt {
     text-align: left;
     padding: 15px;
 }
@@ -517,118 +651,141 @@ h1,h2{
 
 
 
-.price{
-    background-color: rgba(20,110,110,0.80);
+.price {
+    background-color: rgba(20, 110, 110, 0.80);
     margin: -40px 0;
 }
-.price_box dt{
-    background-color: rgba(0,0,0,0.45);
+
+.price_box dt {
+    background-color: rgba(0, 0, 0, 0.45);
     padding: 20px;
 }
-.price_box dd{
+
+.price_box dd {
     padding: 20px;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255, 255, 255, 0.8);
     margin-left: 0;
     margin-bottom: 20px;
 
 }
-.price h2{
+
+.price h2 {
 
     color: #ffffff;
 
 
 }
-.price h3,.price dt{
+
+.price h3,
+.price dt {
     color: white;
 }
-.price h3{
+
+.price h3 {
     border-bottom: 1px solid #fff;
     padding: 10px;
     font-size: 25px;
 }
 
-@media(min-width:640px){
-    .price_box{
+@media(min-width:640px) {
+    .price_box {
         display: flex;
         justify-content: space-around;
         padding-bottom: 200px;
     }
 
-    .heijitu,.syukujitu{
+    .heijitu,
+    .syukujitu {
         width: 45%;
     }
 }
+
 .yoyaku {
     padding-top: 40px;
 }
-span{
+
+span {
     color: red;
 }
-.people{
+
+.people {
     display: flex;
     justify-content: center;
 }
-select{
+
+select {
     width: 50%;
     height: 50px;
 }
-.yoyaku input{
-margin-top: 5%;
- width: 100%;
- height: 50px;
+
+.yoyaku input {
+    margin-top: 5%;
+    width: 100%;
+    height: 50px;
 
 }
-input[type="submit"]{
+
+input[type="submit"] {
     margin: 30px 0;
 }
-textarea{
+
+textarea {
     width: 100%;
 
 }
-@media(min-width:640px){
 
-    .people{
-     width: 30%;
+@media(min-width:640px) {
+
+    .people {
+        width: 30%;
     }
 
-    select{
+    select {
         width: 100%;
         margin: 0 5%;
     }
-    .yoyaku input{
+
+    .yoyaku input {
         width: 30%;
         margin-top: 0%;
 
     }
-    input[type="submit"]{
+
+    input[type="submit"] {
         margin: 30px 0;
     }
-    .search{
+
+    .search {
         display: flex;
-       justify-content: center;
-       width: 70%;
-       margin: 50px auto;
+        justify-content: center;
+        width: 70%;
+        margin: 50px auto;
 
 
 
     }
-    textarea{
+
+    textarea {
         width: 70%;
     }
 }
-footer{
+
+footer {
     text-align: center;
 }
-.sns{
+
+.sns {
     display: flex;
     justify-content: space-around;
-    margin:50px;
+    margin: 50px;
 }
 
-.twitter:hover,.instagram:hover{
+.twitter:hover,
+.instagram:hover {
     opacity: 0.8;
 }
-.twitter p{
+
+.twitter p {
     border-radius: 100px;
     width: 60px;
     height: 60px;
@@ -640,7 +797,8 @@ footer{
     margin-bottom: 20px;
     display: inline-block;
 }
-.instagram p{
+
+.instagram p {
     border-radius: 100px;
     width: 60px;
     height: 60px;
@@ -653,45 +811,52 @@ footer{
     display: inline-block;
 
 }
-footer img{
 
-    width:100%;
-    height:auto;
+footer img {
+
+    width: 100%;
+    height: auto;
     margin-top: 10px;
 }
 
-footer ul{
+footer ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
     font-size: 10px;
 }
-footer ul li a{
-    color:#999;
+
+footer ul li a {
+    color: #999;
 
 }
-.banner a{
+
+.banner a {
     display: inline-block;
 }
-footer li a:hover{
-    color:black;
+
+footer li a:hover {
+    color: black;
 }
-small{
+
+small {
     font-size: 5px;
 
 }
 
-@media(min-width:640px){
-    .banner{
+@media(min-width:640px) {
+    .banner {
         display: flex;
         justify-content: space-around;
     }
-    footer img{
+
+    footer img {
         max-width: 300px;
         width: 100%;
         height: auto;
     }
-    footer ul{
+
+    footer ul {
         width: 50%;
         margin-left: auto;
         margin-right: auto;

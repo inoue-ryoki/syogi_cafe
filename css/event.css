@@ -1,19 +1,23 @@
 @charset "UTF8";
 
-.pc li a{
+.pc li a {
     color: black;
 
 }
-header{
+
+header {
     border-bottom: 1px solid #707070;
 }
-.event{
+
+.event {
     padding-top: 50px;
 }
-.event_box_list{
+
+.event_box_list {
     padding-top: 50px;
 }
-h1{
+
+h1 {
     font-size: 30px;
     padding: 40px;
 }
@@ -21,20 +25,26 @@ h1{
 /* .event_box{
     padding-top: 50px;
 } */
-.event h2{
+.event h2 {
     text-align: center;
 
 }
-#underline{
+
+#underline {
     background: black;
     top: 80px;
 }
+
 /* .event_box{
     padding: 20px 0;
 } */
 
-@media(min-width:768px){
-    .event{
-    padding-top: 150px;
-}
+@media(min-width:768px) {
+    .event {
+        /* padding-top: 150px; */
+    }
+
+    header {
+        position: relative;
+    }
 }

@@ -1,11 +1,14 @@
 @charset "UTF8";
-.pc li a{
+
+.pc li a {
     color: black;
 
 }
-header{
+
+header {
     border-bottom: 1px solid #707070;
 }
+
 #underline {
     position: absolute;
     top: 100px;
@@ -15,7 +18,8 @@ header{
     background: black;
 }
 
-h1,h2{
+h1,
+h2 {
 
     text-align: center;
 
@@ -26,50 +30,61 @@ h1,h2{
     margin: 0 auto;
     position: relative;
 }
-.midasi{
+
+.midasi {
     text-align: center;
     /* padding-top: 50px; */
 }
-.about{
+
+.about {
+    /* padding-top: 50px; */
+}
+
+.content {
+
     padding-top: 50px;
 }
-  .content{
 
-        padding-top: 50px;
-    }
 .about h1 {
     font-size: 30px;
     padding: 50px;
 }
- h2{
+
+h2 {
     font-size: 20px;
     margin: 20px;
     border-bottom: 1px solid black;
 
 }
-.about p{
+
+.about p {
     padding: 20px;
     line-height: 25px;
 }
-h3{
+
+h3 {
     background-color: #eee;
     padding: 8px;
     text-align: left;
     border-left: 3px solid #ccc;
 }
- img{
+
+img {
     max-width: 100%;
     height: auto;
 
 }
-dt{
+
+dt {
     padding: 15px;
     float: left;
 }
-.other{
+
+.other {
     padding: 25px;
 }
-.shop-info dd{
+
+.shop-info dd {
     width: 100%;
     padding: 15px;
 
@@ -77,38 +92,45 @@ dt{
 }
 
 
-@media(min-width:768px){
-    h2{
+@media(min-width:768px) {
+    h2 {
         font-size: 30px;
     }
-    .content{
+
+    header {
+        position: relative;
+    }
+
+    .content {
         width: 700px;
         margin: 0 auto;
         padding-top: 50px;
     }
 
-    .about img{
+    .about img {
         width: 100%;
         height: auto;
     }
+
     /* .midasi{
         padding-top: 200px;
     } */
-    .about{
-        padding-top: 150px;
+    .about {
+        /* padding-top: 150px; */
     }
 
-    .about p{
+    .about p {
         font-size: 18px;
     }
 
 }
 
-.shop-info dt{
- width: 22%;
+.shop-info dt {
+    width: 22%;
 
 }
-.shop-info dd{
+
+.shop-info dd {
     /* width: 78%; */
     border-top: 1px solid #ddd;
 }
